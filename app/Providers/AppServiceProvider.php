@@ -4,7 +4,7 @@ namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Validator;
-
+use Illuminate\Database\Eloquent\Relations\Relation;
 class AppServiceProvider extends ServiceProvider
 {
     /**
@@ -28,5 +28,10 @@ class AppServiceProvider extends ServiceProvider
             $pattern = "/[6-9]{1}[0-9]{9}/";
             return preg_match($pattern, $value);
         });
+
+        Relation::morphMap([
+            'Users' => 'App\Models\User',
+            'Admin' => 'App\Models\Admin',
+        ]);
     }
 }

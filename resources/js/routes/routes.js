@@ -1,8 +1,6 @@
 import Vue from "vue"
 import VueRouter from "vue-router"
 import DashboardLayout from "../pages/Layout/DashboardLayout.vue";
-
-import Dashboard from "../pages/Dashboard.vue";
 import UserProfile from "../pages/UserProfile.vue";
 import EditProfileForm from "../pages/UserProfile/EditProfileForm.vue";
 import UserList from "../pages/UserList.vue";

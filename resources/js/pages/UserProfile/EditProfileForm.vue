@@ -1,68 +1,62 @@
 <template>
-  <div class="content">
-    <div class="md-layout">
-      <div class="md-layout-item md-medium-size-100 md-size-66">
-        <form>
-            <md-card>
-              <md-card-header>
-                <h4 class="title">Edit User</h4>
-              </md-card-header>
+  <form>
+    <md-card>
+      <md-card-header>
+        <h4 class="title">Edit User</h4>
+      </md-card-header>
 
-              <md-card-content>
-                      <div class="form-group">
-                          <input
-                              type="text"
-                              class="form-control col-md-12"
-                              v-model="name"
-                              placeholder = "Edit user name"
-                              style="height:40px">
-                      </div>
-                      <div class="form-group">
-                          <input type="radio" id="male" v-model="gender" name="gender" value=1>
-                          <label for="male">Male</label><br>
-                          <input type="radio" id="female" v-model="gender" name="gender" value=0>
-                          <label for="female">Female</label><br>
-                      </div>
-                      <div class="form-group">
-                          <input
-                              type="text"
-                              class="form-control col-md-12"
-                              v-model="mobile"
-                              placeholder = "Edit user mobile"
-                              style="height:40px"
-                              minlength="10"
-                              maxlength="10">
-                      </div>
-                      <div class="form-group">
-                          <input
-                              type="text"
-                              class="form-control col-md-12"
-                              v-model="email"
-                              placeholder = "Edit user email"
-                              style="height:40px">
-                      </div>
-                      <div class="form-group">
-                          <input
-                              type="password"
-                              class="form-control col-md-12"
-                              v-model="password"
-                              placeholder = "Edit user password"
-                              style="height:40px">
-                      </div>
-                      <div class="form-group" @click="userSave">
-                          <button
-                              type="button"
-                              class="btn btn-primary col-md-12"
-                              style="height:40px"
-                              >Save</button>
-                      </div>
-                      <label class="text-danger w-100 animated FadeIn">{{ message }}</label>
-              </md-card-content>
-            </md-card>
-          </form>
-      </div>
-    </div>
-  </div>
+      <md-card-content>
+              <div class="form-group">
+                  <input
+                      type="text"
+                      class="form-control col-md-12"
+                      v-model="name"
+                      placeholder = "Edit user name"
+                      style="height:40px">
+              </div>
+              <div class="form-group">
+                  <input type="radio" id="male" v-model="gender" name="gender" value=1>
+                  <label for="male">Male</label><br>
+                  <input type="radio" id="female" v-model="gender" name="gender" value=0>
+                  <label for="female">Female</label><br>
+              </div>
+              <div class="form-group">
+                  <input
+                      type="text"
+                      class="form-control col-md-12"
+                      v-model="mobile"
+                      placeholder = "Edit user mobile"
+                      style="height:40px"
+                      minlength="10"
+                      maxlength="10">
+              </div>
+              <div class="form-group">
+                  <input
+                      type="text"
+                      class="form-control col-md-12"
+                      v-model="email"
+                      placeholder = "Edit user email"
+                      style="height:40px">
+              </div>
+              <div class="form-group">
+                  <input
+                      type="password"
+                      class="form-control col-md-12"
+                      v-model="password"
+                      placeholder = "Edit user password"
+                      style="height:40px">
+              </div>
+              <div class="form-group" @click="userSave">
+                  <button
+                      type="button"
+                      class="btn btn-primary col-md-12"
+                      style="height:40px"
+                      >Save</button>
+              </div>
+              <label class="text-danger w-100 animated FadeIn">{{ message }}</label>
+      </md-card-content>
+    </md-card>
+  </form>
 </template>
 <script>
 import axios from 'axios'

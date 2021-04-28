@@ -29,7 +29,7 @@ class AuthController extends Controller
    	}
 
    	public function adminLogout(){
-	    request()->user()->tokens()->where(['tokenable_id'=> Auth::id()])->delete();
+	    request()->user()->tokens()->where(['tokenable_id'=> Auth::id(), 'tokenable_type'=> 'Admin'])->delete();
         return response()->json(['message' => 'Loggedout successfully', 'status' => 'success'], 200);
    	}
 
@@ -54,7 +54,7 @@ class AuthController extends Controller
    	}
 
    	public function userLogout(){
-   		request()->user()->tokens()->where(['tokenable_id'=> Auth::id()])->delete();
+   		request()->user()->tokens()->where(['tokenable_id'=> Auth::id(), 'tokenable_type'=> 'Users'])->delete();
         return response()->json(['message' => 'Loggedout successfully', 'status' => 'success'], 200);
    	}
 }
